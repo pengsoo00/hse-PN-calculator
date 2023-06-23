@@ -11,8 +11,8 @@ ex) http://localhost:8080/test
     Build the jar.
     > mvn clean compile package
     > cd target
-    # Execute the jar with arguments:
-    # java -jar hse-0.0.1-SNAPSHOT.jar
+    # Execute the jar:
+    > java -jar hse-0.0.1-SNAPSHOT.jar
     # firstNumber secondNumber operation    
     example:
     > 1 1 +
@@ -28,3 +28,22 @@ ex) http://localhost:8080/test
     > cos
     > [0.9689124217106447, 2]
     > q (quit)
+
+# Command line application in a Docker container
+    # Build the jar.
+    > mvn clean compile package
+    
+    # Build the image.
+    > docker build -f src/main/docker/Dockerfile.jvm -t spring/calculator-jvm .
+    
+    # View your created image.
+    > docker images | grep spring/calculator-jvm
+    
+    # Run the container using.
+    > docker run -i --rm -p 8080:8080 -e FIRST=1 -e OPERATION=+ -e SECOND=2 spring/calculator-jvm
+    
+    # Remove your image.
+    > docker rmi spring/calculator-jvm
+    
+    # Clean up any resources — images, containers, volumes, and networks — that are dangling (not tagged or associated with a container).
+    > docker system prune
