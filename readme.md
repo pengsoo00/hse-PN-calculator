@@ -8,25 +8,31 @@ GET test
 ex) http://localhost:8080/test
 
 # How to use?
-    Build the jar.
+    # Build the file.jar
     > mvn clean compile package
     > cd target
+
     # Execute the jar:
     > java -jar hse-0.0.1-SNAPSHOT.jar
-    # firstNumber secondNumber operation    
-    example:
+
+    # firstNumber secondNumber operation 
+    Example:
     > 1 1 +
-    > [1]
-    > [1, 1]
-    > [2]
+      [1]
+      [1, 1]
+      [2]
+    
     > 1 2 /
-    > [1, 2]
-    > [2, 1, 2]
-    > [.5000000000, 2]
+      [1, 2]
+      [2, 1, 2]
+      [.5000000000, 2]
+
     > 2 ^
-    > [0.25000000000000000000, 2]
+      [0.25000000000000000000, 2]
+
     > cos
-    > [0.9689124217106447, 2]
+      [0.9689124217106447, 2]
+
     > q (quit)
 
 # Command line application in a Docker container
