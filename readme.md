@@ -6,3 +6,25 @@
 GET test
 
 ex) http://localhost:8080/test
+
+# How to use?
+> Build the jar.
+> 
+> mvn clean compile package
+> cd target
+>
+> Execute the jar with arguments:
+> 
+> java -jar hse-0.0.1-SNAPSHOT.jar 
+> 
+> firstNumber secondNumber operation
+> 
+> 1 1 +
+>
+> 1 1 /
+>
+> 2 ^
+>
+> 1 cos
+> 
+> q
