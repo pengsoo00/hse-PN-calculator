@@ -8,23 +8,23 @@ GET test
 ex) http://localhost:8080/test
 
 # How to use?
-    > Build the jar.
-    > 
-    >   mvn clean compile package
+    Build the jar.
+    > mvn clean compile package
     > cd target
-    >
-    > Execute the jar with arguments:
-    > 
-    > java -jar hse-0.0.1-SNAPSHOT.jar 
-    > 
-    > firstNumber secondNumber operation
-    > 
+    # Execute the jar with arguments:
+    # java -jar hse-0.0.1-SNAPSHOT.jar
+    # firstNumber secondNumber operation    
+    example:
     > 1 1 +
-    >
-    > 1 1 /
-    >
+    > [1]
+    > [1, 1]
+    > [2]
+    > 1 2 /
+    > [1, 2]
+    > [2, 1, 2]
+    > [.5000000000, 2]
     > 2 ^
-    >
-    > 1 cos
-    > 
+    > [0.25000000000000000000, 2]
+    > cos
+    > [0.9689124217106447, 2]
     > q (quit)
