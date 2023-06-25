@@ -1,10 +1,10 @@
-## Rpn-Calculator
+# Rpn-Calculator
 
 - постфиксная (https://ru.wikipedia.org/wiki/Обратная_польская_запись)
 - Аналог bc. Арифметика (+ - * / ^) и элементарные функции от одного вещественного аргумента (sin, cos, tan, log, log10, log2). Будет преимуществом: поддержка вещественных чисел с произвольной точностью (см. java.lang.BigDecimal)
 - Калькулятор должен позволять легко (минимальным изменением кода) добавлять новые операторы [, бонус — и с более чем 2 аргументами тоже]
 
-# How to use?
+## How to use?
     # Build the file.jar
     > mvn clean compile package
     > cd target
@@ -32,5 +32,5 @@
 
     > q (quit)
 
-# Command line application in a Docker container
+## Command line application in a Docker container
     > docker container run -it pengs00/docker-rpn-calculator:firsttry
