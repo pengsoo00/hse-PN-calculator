@@ -1,5 +1,5 @@
 ## Rpn-Calculator
-- Постфиксная (https://ru.wikipedia.org/wiki/Обратная_польская_запись)
+- постфиксная (https://ru.wikipedia.org/wiki/Обратная_польская_запись)
 - Аналог bc. Арифметика (+ - * / ^) и элементарные функции от одного вещественного аргумента (sin, cos, tan, log, log10, log2). Будет преимуществом: поддержка вещественных чисел с произвольной точностью (см. java.lang.BigDecimal)
 - Калькулятор должен позволять легко (минимальным изменением кода) добавлять новые операторы [, бонус — и с более чем 2 аргументами тоже]
 
@@ -25,7 +25,7 @@ ex) http://localhost:8080/test
     > 1 2 /
       [1, 2]
       [2, 1, 2]
-      [0.5000000000, 2]
+      [.5000000000, 2]
 
     > 2 ^
       [0.25000000000000000000, 2]
@@ -40,21 +40,15 @@ ex) http://localhost:8080/test
     > mvn clean compile package
     
     # Build the image.
-    > docker build -t web-calculator .
-
     > docker build -f src/main/docker/Dockerfile.jvm -t spring/calculator-jvm .
     
     # View your created image.
     > docker images | grep spring/calculator-jvm
     
     # Run the container using.
-    > docker run -d -P --name 8080:8080 web-calculator
-
     > docker run -i --rm -p 8080:8080 -e FIRST=1 -e OPERATION=+ -e SECOND=2 spring/calculator-jvm
     
     # Remove your image.
-    > docker rmi web-calculator
-
     > docker rmi spring/calculator-jvm
     
     # Clean up any resources — images, containers, volumes, and networks — that are dangling (not tagged or associated with a container).
